@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wedding Stage Decorations - Priya Flowers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html, body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url(./images/♡.jpeg);
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    h1 {
+        font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+      color: #a14c4c;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #444;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .stage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 60px;
+    }
+
+    .stage-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .stage-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .stage-card:hover .overlay {
+      opacity: 1;
+    }
+
+    .icons-overlay {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .icons-overlay a {
+        color:#fff;
+        font-size: 20px;
+        margin: 0 10px;
+        text-decoration: none;  
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 50%;
+      transition:trnsfomr 0.2s ease;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+
+    .icons-overlay a:hover {
+        transform: scale(1.2);
+      background-color: #855e5e;
+      color: white;
+      
+    }
+    
+
+    .back-button {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-button a {
+      padding: 10px 20px;
+      background-color: #855e5e;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .back-button a:hover {
+      background-color: #310620;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .lightbox img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 5px 10px;
+      border-radius: 6px;
+    }
+  .instruction{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px ;
+      padding: 20px 0 0;
+    background-color: #eedde7;
+    border-radius: 50px;
+    
+   
+  }
+  .instruction p{
+    
+    color: #a14c4c;
+  }
+   
+    @media (max-width: 768px) {
+      .stage-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stage-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .instruction{
+         border-radius: 20px ;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1> CAR BOUQUETS</h1>
+    <p>
+     Our Custom Car Bouquet designs are created with love and intricate artistry to perfectly match your event's energy. You can add personal touch to your car bouquets.
+    </p>
+    <div class="instruction"> 
+      <p> If you'd like to make an inquiry or place order for an item, tap the WhatsApp or Email icon below each item.</p>
+    </div>
+
+    <div class="stage-grid">
+      <div class="stage-card" onclick="openLightbox('assets/car1.jpeg')">
+        <img src="assets/car1.jpeg" alt="Stage Decoration 1">
+        <div class="overlay">View</div>
+      </div>
+
+      <div class="stage-card" onclick="openLightbox('assets/car2.jpeg')">
+        <img src="assets/car2.jpeg" alt="Stage Decoration 2">
+        <div class="overlay">View</div>
+      </div>
+
+      <div class="stage-card" onclick="openLightbox('assets/car3.jpeg')">
+        <img src="assets/car3.jpeg" alt="Stage Decoration 2">
+        <div class="overlay">View</div>
+      </div>
+      <div class="stage-card" onclick="openLightbox('assets/car5.jpeg')">
+        <img src="assets/car5.jpeg" alt="Stage Decoration 2">
+        <div class="overlay">View</div>
+      </div>
+      <div class="stage-card" onclick="openLightbox('assets/car10.jpeg')">
+        <img src="assets/car10.jpeg" alt="Stage Decoration 2">
+        <div class="overlay">View</div>
+      </div>
+      <div class="stage-card" onclick="openLightbox('assets/car11.jpeg')">
+        <img src="assets/car11.jpeg" alt="Stage Decoration 2">
+        <div class="overlay">View</div>
+      </div>
+      <div class="stage-card" onclick="openLightbox('assets/car7.jpeg')">
+        <img src="assets/car7.jpeg" alt="Stage Decoration 2">
+        <div class="overlay">View</div>
+      </div>
+      <div class="stage-card" onclick="openLightbox('assets/car9.jpeg')">
+        <img src="assets/car9.jpeg" alt="Stage Decoration 2">
+        <div class="overlay">View</div>
+      </div>
+
+      
+    </div>
+
+    <div class="back-button">
+      <a href="index.html#services">← Back to Services</a>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="Full View">
+    <div class="icons-overlay">
+      <a href="mailto:priyaflowers@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+ 
+
+
+  <script>
+    function openLightbox(imgSrc) {
+      document.getElementById("lightbox-img").src = imgSrc;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+   
+  </script>
+</body>
+</html>
