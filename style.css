@@ -329,6 +329,22 @@
     background-color: white;
     color: #ff4e70;
   }
+@media (max-width:768px){
+  .cta-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+ .cta-content h1{
+  font-size: 1.8rem;
+  text-align: center;
+ }
+ .cta-content p{
+  padding: 0 10px;
+  text-align: center;
+ }
+}
   .gallery-container {
     display: flex;
     justify-content: space-around;
